@@ -147,18 +147,3 @@ def sha256(message_bytes):
     # Converte as 8 palavras de 32 bits para 32 bytes (big-endian)
     result = b''.join(struct.pack('>I', h) for h in current_hash)
     return result
-
-"""# --- Exemplo de uso ---
-if __name__ == "__main__":
-    # Mensagem de teste
-    msg = b"hello world"
-    hash_bytes = sha256(msg)
-    hash_hex = hash_bytes.hex()
-    print(f"Mensagem: {msg.decode()}")
-    print(f"SHA-256: {hash_hex}")
-    
-    # Verificação com hashlib (opcional)
-    import hashlib
-    expected = hashlib.sha256(msg).hexdigest()
-    print(f"Esperado: {expected}")
-    print("OK!" if hash_hex == expected else "Falha!")"""
